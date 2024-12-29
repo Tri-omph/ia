@@ -5,9 +5,11 @@ L'intelligence artificielle en clustering pour les déchets
 
 ## Contexte
 
-Sous Windows, les conversions de `.pth` vers `.onnx` puis vers TensorFlow se sont bien déroulées. Cependant, il semble qu'un des modules nécessaires à la conversion de TensorFlow vers TensorFlow.js ne soit pas utilisable sous Windows, mais uniquement disponible sous Linux.
+- Sous Windows, les conversions de `.pth` vers `.onnx` puis vers TensorFlow se sont bien déroulées. Cependant, il semble qu'un des modules nécessaires à la conversion de TensorFlow vers TensorFlow.js ne soit pas utilisable sous Windows, mais uniquement disponible sous Linux.
 
-Je vais donc continuer la conversion sous Linux pour contourner ce problème...
+- Sous Linux, la conversion de TensorFlow vers TensorFlowJS, s'est bien déroulée !
+
+C'est loin d'être une solution admirable, mais cela fonctionne !
 
 ## Démarche sous Windows
 

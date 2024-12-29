@@ -9,4 +9,3 @@ tensorflow==2.14.0
 tensorflow-addons==0.22.0
 tensorflow_probability==0.22.1
 tensorflowjs
-tensorflow_decision_forests
