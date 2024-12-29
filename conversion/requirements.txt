@@ -1,0 +1,12 @@
+numpy<2.0
+torch
+efficientnet_pytorch
+torchvision
+onnx
+onnxruntime
+onnx-tf
+tensorflow==2.14.0
+tensorflow-addons==0.22.0
+tensorflow_probability==0.22.1
+tensorflowjs
+tensorflow_decision_forests

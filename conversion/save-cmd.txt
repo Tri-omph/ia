@@ -1,0 +1,5 @@
+virtualenv --python=python3.10 .convert-ia # 3.10 important !!!!!
+.convert-ia\Scripts\activate
+pip install
+
+tensorflowjs_converter --input_format=tf_saved_model ./IA-v1_tf ./IA_v1_tfjs
