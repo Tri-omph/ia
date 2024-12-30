@@ -2,4 +2,5 @@ virtualenv --python=python3.10 .convert-ia # 3.10 important !!!!!
 .convert-ia\Scripts\activate
 pip install
 
-tensorflowjs_converter --input_format=tf_saved_model ./IA-v1_tf ./IA_v1_tfjs
+tensorflowjs_converter --input_format=tf_saved_model --output_format=tfjs_graph_model --saved_model_tags=serve ./version/v1/IA-v1_tf ./version/v1/IA-v1_tfjs
+# ok serve, c'est un focus orienté prédictions, on laisse tmber ce qui concernce l'entraiement ie, on garde que ce qui concerne les prédictions

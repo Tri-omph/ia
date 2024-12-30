@@ -21,14 +21,14 @@ def load_model(nomIA, num_classes, usingResnet=False):
     return model
 
 # *************************** conversion pth => onnx
-nomIA = "IA-v1"
+nomIA = "./version/v1/IA-v1"
 num_classes = 8
 usingResnet = False
 
 model = load_model(nomIA, num_classes)
 
 # Export ONNX
-dummy_input = torch.randn(1, 3, 256, 256)
+dummy_input = torch.randn(1, 3, 224, 224)
 torch.onnx.export(
     model,
     dummy_input,
@@ -36,10 +36,6 @@ torch.onnx.export(
     opset_version=11,
     input_names=["img_input"],
     output_names=["class_nb_output"],
-    dynamic_axes={
-        "img_input": {0: "batch_size", 2: "height", 3: "width"},
-        "classification_nbs_output": {0: "batch_size"}
-    }
 )
 
 print("[OK]*************************** conversion pth => onnx\n\n")
@@ -59,6 +55,7 @@ tf_rep.export_graph(f"{nomIA}_tf")
 
 
 print("[OK]*************************** conversion onnx => tensorflow\n\n")
+
 # *************************** conversion tensorflow => tensorflowjs
 
 

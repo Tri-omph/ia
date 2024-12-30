@@ -43,3 +43,26 @@ source .convert-ia/bin/activate
 ```bash
 pip install -r requirements2.txt
 ```
+
+## Démarche générale
+
+Sous Windows
+1. Démarrer [l'environnement virtuel](#démarche-sous-windows).
+2. Lancer les conversions avec les commandes suivantes.
+
+```bash
+cd ./conversion
+python ./main.py
+```
+
+Passer sous Linux
+1. Démarrer [l'environnement virtuel](#démarche-sous-linux).
+2. Lancer la dernière conversion avec les commandes suivantes.
+
+```bash
+cd ./conversion
+tensorflowjs_converter --input_format=tf_saved_model --output_format=tfjs_graph_model --saved_model_tags=serve ./version/v1/IA-v1_tf ./version/v1/IA-v1_tfjs
+```
+`NB`: Adapter les versions dans les commandes ci-dessus !
+
+3. Copier-coller le dossier obtenu dans votre application
