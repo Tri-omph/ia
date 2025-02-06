@@ -66,3 +66,22 @@ tensorflowjs_converter --input_format=tf_saved_model --output_format=tfjs_graph_
 `NB`: Adapter les versions dans les commandes ci-dessus !
 
 3. Copier-coller le dossier obtenu dans votre application
+
+
+# Serveur Flask
+
+## Contexte
+
+- Après la conversion du modèle en ONNX, on peut créer un serveur Flask pour connecter un fichier Python à l'application.
+
+## Utilisation
+
+- Le serveur Flask est sur le fichier app.py. Le fichier tourne sur l'adresse localhost:5000/predict. Le body de la requête est un form-data de forme key="file" / value=chemin_image.extension (selon l'image). La réponse de la requête est le nom de la classe de l'image (nom en français).
+
+## Démarche sous Windows
+
+```bash
+cd ./conversion
+pip install requirements3.txt
+./app.py
+```
